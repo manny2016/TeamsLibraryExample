@@ -17,8 +17,15 @@ namespace TeamsLibraryExample.Services {
 			Logger.Info($"Completed.");
 		}
 
-		public static void SendPersonalMessage(IServiceProvider provider) {
+		public static async void SendPersonalMessage(IServiceProvider provider) {
 
+			Logger.Info($"Execution={nameof(SendChannelMessage)}");
+
+			var client = provider.GetService<ITeamsSdkClient>();
+			var id = await client.SendPersonalMessageAsync();
+
+			Logger.Info($"ConversationId={id}");
+			Logger.Info($"Completed.");
 		}
 		public static async void SendChannelMessage(IServiceProvider provider) {
 

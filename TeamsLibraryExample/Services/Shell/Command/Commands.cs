@@ -39,8 +39,11 @@ namespace TeamsLibraryExample.Services {
 	[Verb("GetMessageInChat", HelpText = "Get message in chat.")]
 	public class GetMessageInChat { }
 
-	[Verb("ListAllHostedContent", HelpText = "List all hosted content.")]
-	public class ListAllHostedContent { }
+	[Verb("ListAllHostedContentInChannel", HelpText = "List all hosted content in channel.")]
+	public class ListAllHostedContentInChannel { }
+
+	[Verb("ListAllHostedContentInChat", HelpText = "List all hosted content in chat.")]
+	public class ListAllHostedContentInChat { }
 
 	[Verb("ListHostedContent", HelpText = "Get hosted content.")]
 	public class GetHostedContent { }	
